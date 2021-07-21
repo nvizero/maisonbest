@@ -130,20 +130,20 @@ class Frontend1101Controller extends BaseController
 
     public function about()
     {
-        $d = array("title" => "about", "ip" => $_SERVER["REMOTE_ADDR"], "created_at" => date("Y-m-d h:i:s"));
-        $this->insertToExplode($d);
+//        $d = array("title" => "about", "ip" => $_SERVER["REMOTE_ADDR"], "created_at" => date("Y-m-d h:i:s"));
+//        $this->insertToExplode($d);
         $data = $this->init_date();
         $data["post"] = Post::where('id', 7)->first();
-        $data["ad_12"] = Ad::where("category_id", 26)->take(6)->orderBy("pr", "asc")->get();            
+        $data["ad_12"] = Ad::where("category_id", 26)->take(6)->orderBy("pr", "asc")->get();
         return View::make('frontend1101.about', $data);
     }
 
     public function people()
     {
-        $d = array("title" => "people", "ip" => $_SERVER["REMOTE_ADDR"], "created_at" => date("Y-m-d h:i:s"));
-        $this->insertToExplode($d);
+//        $d = array("title" => "people", "ip" => $_SERVER["REMOTE_ADDR"], "created_at" => date("Y-m-d h:i:s"));
+//        $this->insertToExplode($d);
         $data = $this->init_date();
-        $data["ad_12"] = Ad::where("category_id", 25)->take(6)->orderBy("pr", "asc")->get();        
+        $data["ad_12"] = Ad::where("category_id", 25)->take(6)->orderBy("pr", "asc")->get();
         $data["peoples"] = People::where('flag', 0)->orderBy("prim", "desc")->paginate(5);
         return View::make('frontend1101.people', $data);
     }
@@ -233,7 +233,7 @@ class Frontend1101Controller extends BaseController
 
 
     public function deco()
-    {    
+    {
         $d = array("title" => "deco",
             "ip" => $_SERVER["REMOTE_ADDR"],
             "created_at" => date("Y-m-d h:i:s"));
@@ -253,7 +253,7 @@ class Frontend1101Controller extends BaseController
             $data["decos"] = Deco::orderBy("prim", "asc")->paginate(5);
 
         }
-        $data["ad_12"] = Ad::where("category_id", 22)->take(6)->orderBy("pr", "asc")->get();        
+        $data["ad_12"] = Ad::where("category_id", 22)->take(6)->orderBy("pr", "asc")->get();
         return View::make('frontend1101.deco', $data);
     }
 
@@ -270,7 +270,7 @@ class Frontend1101Controller extends BaseController
     {
 
         $data = $this->init_date();
-        $data["ad_12"] = Ad::where("category_id", 20)->take(6)->orderBy("pr", "asc")->get();    
+        $data["ad_12"] = Ad::where("category_id", 20)->take(6)->orderBy("pr", "asc")->get();
         $cate = Input::get("cate");
         if (!isset($cate)) {
             // $cate="地產新聞";
@@ -318,7 +318,7 @@ class Frontend1101Controller extends BaseController
     public function case1()
     {
         $data = $this->init_date();
-        $data["ad_12"] = Ad::where("category_id", 12)->take(6)->orderBy("pr", "asc")->get();    
+        $data["ad_12"] = Ad::where("category_id", 12)->take(6)->orderBy("pr", "asc")->get();
         $data["areas"] = RateArea::where("flag", 1)->get();
         $data["layouts"] = DB::table("layouts")->get();
         $taiwanArea = Input::get("taiwanArea");

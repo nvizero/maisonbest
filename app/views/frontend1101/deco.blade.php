@@ -29,11 +29,11 @@
             <div class="row">
                 <div class="col-xs-12 col-md-9">
                     @foreach($decos as $deco)
-                    <a href="/f1101/deco2/{{$deco->id}}">
+                    <a href="/deco2/{{$deco->id}}">
                         <div class="deco_conItem">
                             <div class="col-12 col-md-6 deco_picBox">
                             @if(  !empty($deco->image) AND File::exists( public_path().$deco->image)  )
-                                <img src="/public{{$deco->image}}" />                            
+                                <img src="/public{{$deco->image}}" />
                             @endif
                             </div>
 
@@ -65,16 +65,16 @@
                         <div class="deco_barCon">
 
 
-                            <a href="/f1101/deco?type=風格店鋪">
+                            <a href="/deco?type=風格店鋪">
                                 <div class="deco_tag">風格店鋪</div>
                             </a>
-                            <a href="/f1101/deco?type=裝潢設計">
+                            <a href="/deco?type=裝潢設計">
                                 <div class="deco_tag">裝潢設計</div>
                             </a>
-                            <a href="/f1101/deco?type=建材百科">
+                            <a href="/deco?type=建材百科">
                                 <div class="deco_tag">建材百科</div>
                             </a>
-                            <a href="/f1101/deco?type=藝文專欄">
+                            <a href="/deco?type=藝文專欄">
                                 <div class="deco_tag">藝文專欄</div>
                             </a>
 
@@ -96,7 +96,7 @@
                             $decos = Deco::orderBy("prim","asc")->paginate(5);
                             ?>
                             @foreach($decos as $deco)
-                            <a href="/f1101/desc/{{$deco->id}}">
+                            <a href="/desc/{{$deco->id}}">
                                 <div class="news_moreitem">
                                     <img src="/html1101/img/search.png" alt="">
                                     <div>
@@ -116,26 +116,9 @@
                 </div>
             </div>
         </div>
+
             <div class="row pageNumber">
-                <a href="javascript:;">
-                    <div class="pageNumber_box">&lt;</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box pageSelect">1</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">2</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">3</div>
-                </a>
-                <div class="pageNumber_box">...</div>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">10</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">&gt;</div>
-                </a>
+                <?php echo with(new CustomPresenter($decos))->render(); ?>
             </div>
         </div>
     </section>

@@ -107,7 +107,7 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="index_picBox">
-                    <a href="/f1101/people2/{{$people->id}}">
+                    <a href="/people2/{{$people->id}}">
                         @if(  !empty($people->image) AND File::exists( public_path().$people->image)  )
                             <img src="/public{{$people->image}}" />
                         @endif
@@ -127,7 +127,7 @@
                         echo ms_str($people->content);
                         ?>
                     </p>
-                    <a href="/f1101/people2/{{$people->id}}" alt="more">
+                    <a href="/people2/{{$people->id}}" alt="more">
                         <div class="button_more_w">MORE</div>
                     </a>
                 </div>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="index_newsTextbox">
                     @foreach($posts as $_new)
-                        <a href="/f1101/news2/{{$_new->id}}">
+                        <a href="/news2/{{$_new->id}}">
                             <div class="textItem">
                                 <time datatime="{{$_new->date}}">{{$_new->date}}</time>
                                 <div class="index_newsType">{{$_new->cate}}</div>

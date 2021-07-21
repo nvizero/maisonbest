@@ -47,7 +47,7 @@
 
     <div class="container">
         <div class="row tax_type">
-            <a href="/f1101/case" alt="全部">
+            <a href="/case" alt="全部">
                 <div class="button_more">全部</div>
             </a>
             <?php
@@ -82,7 +82,7 @@
                             <div class="people_item align-self-end">
                                 <div class="type_title"><span>{{$people->name}}</span></div>
                                 <p>{{ms_str($people->content,200) }}</p>
-                                <a href="/f1101/people2/{{$people->id}}" alt="more">
+                                <a href="/people2/{{$people->id}}" alt="more">
                                     <div class="button_more">MORE</div>
                                 </a>
                             </div>
@@ -100,7 +100,7 @@
 
                                 <div class="type_title"><span>{{$people->name}}</span></div>
                                 <p>{{ms_str($people->content,200) }}</p>
-                                <a href="/f1101/people2/{{$people->id}}" alt="more">
+                                <a href="/people2/{{$people->id}}" alt="more">
                                     <div class="button_more">MORE</div>
                                 </a>
                             </div>
@@ -129,28 +129,8 @@
             margin: 10px;
         }
     </style>
-    <div class="container">
-        <div class="row pageNumber">
-            <a href="javascript:;">
-                <div class="pageNumber_box">&lt;</div>
-            </a>
-            <a href="javascript:;">
-                <div class="pageNumber_box pageSelect">1</div>
-            </a>
-            <a href="javascript:;">
-                <div class="pageNumber_box">2</div>
-            </a>
-            <a href="javascript:;">
-                <div class="pageNumber_box">3</div>
-            </a>
-            <div class="pageNumber_box">...</div>
-            <a href="javascript:;">
-                <div class="pageNumber_box">10</div>
-            </a>
-            <a href="javascript:;">
-                <div class="pageNumber_box">&gt;</div>
-            </a>
-        </div>
+    <div class="row pageNumber">
+        <?php echo with(new CustomPresenter($peoples))->render(); ?>
     </div>
 </section>
 

@@ -18,25 +18,25 @@
                 <span>DECO</span>
             </div>
         </a>
-        <a href="/f1101/people">
+        <a href="/people">
             <div class="menu_item">
                 <img src="/html1101/img/people-w.svg" alt="people">
                 <span>PEOPLE</span>
             </div>
         </a>
-        <a href="/f1101/interiors">
+        <a href="/interior">
             <div class="menu_item">
                 <img src="/html1101/img/interior-w.svg" alt="interior">
                 <span>INTERIOR</span>
             </div>
         </a>
-        <a href="/f1101/ebook">
+        <a href="/ebook">
             <img src="/html1101/img/ebook-w.svg" alt="ebook">
             <div class="menu_item">
                 <span>EBOOK</span>
             </div>
         </a>
-        <a href="/f1101/about">
+        <a href="/about">
             <img src="/html1101/img/about.svg" alt="about">
             <div class="menu_item">
                 <span>ABOUT</span>

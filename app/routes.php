@@ -5,67 +5,53 @@ Route::get('/f321', function () {
     echo 'fbooks';
 });
 
-
+/* -start- 新的版面 -start- */
 Route::get('/frontdemo', "Frontend1101Controller@frontdemo");
-Route::get('/f1101', "Frontend1101Controller@index");
+Route::get('/', "Frontend1101Controller@index");
 Route::get('/index_old', "Frontend1101Controller@index_old");
+Route::get('/about', "Frontend1101Controller@about");
+Route::get('/case', "Frontend1101Controller@case1");
+Route::get('/case2/{id}', "Frontend1101Controller@case2");
+Route::get('/news', "Frontend1101Controller@news");
+Route::get('/news2/{id}', "Frontend1101Controller@news2");
+Route::get('/deco', "Frontend1101Controller@deco");
+Route::get('/deco2/{id}', "Frontend1101Controller@deco2");
+Route::get('/people', "Frontend1101Controller@people");
+Route::get('/people2/{id}', "Frontend1101Controller@people2");
+Route::get('/interior', "Frontend1101Controller@interiors");
+Route::get('/interior2/{id}', "Frontend1101Controller@interior2");
+Route::get('/ebook', "Frontend1101Controller@books");
+Route::get('/book2/{id}', "Frontend1101Controller@book2");
+Route::get('/search/', "Frontend1101Controller@search");
+Route::post('/search', "Frontend1101Controller@search");
+/* -end- 新的版面 -end- */
 
-Route::get('/f1101/about', "Frontend1101Controller@about");
-
-Route::get('/f1101/case', "Frontend1101Controller@case1");
-Route::get('/f1101/case2/{id}', "Frontend1101Controller@case2");
-
-Route::get('/f1101/news', "Frontend1101Controller@news");
-Route::get('/f1101/news2/{id}', "Frontend1101Controller@news2");
-
-Route::get('/f1101/deco', "Frontend1101Controller@deco");
-Route::get('/f1101/deco2/{id}', "Frontend1101Controller@deco2");
-
-Route::get('/f1101/people', "Frontend1101Controller@people");
-Route::get('/f1101/people2/{id}', "Frontend1101Controller@people2");
-
-
-Route::get('/f1101/interiors', "Frontend1101Controller@interiors");
-Route::get('/f1101/interior2/{id}', "Frontend1101Controller@interior2");
-
-Route::get('/f1101/ebook', "Frontend1101Controller@books");
-Route::get('/f1101/book2/{id}', "Frontend1101Controller@book2");
-Route::get('/f1101/search/', "Frontend1101Controller@search");
-Route::post('/f1101/search', "Frontend1101Controller@search");
-
-
-Route::get('/', "FrontendController@index");
-
-
-Route::get('/good', "FrontendController@good_good_to_eat");
-Route::get('/good2', "FrontendController@good2");
-Route::get('/index', "FrontendController@index");
-Route::get('/news', "FrontendController@news");
-Route::get('/news2/{id}', "FrontendController@news2");
-Route::get('/case', "FrontendController@case1");
-Route::get('/case2/{id}', "FrontendController@case2");
-Route::get('/deco', "FrontendController@deco");
-// Route::post('/deco', "FrontendController@deco");
-Route::get('/deco2/{id}', "FrontendController@deco2");
-
-Route::get('/people', "FrontendController@people");
-Route::get('/people2/{id}', "FrontendController@people2");
-Route::get('/about', "FrontendController@about");
-// Route::get('/', "FrontendController@index");
-Route::get('/jdata', "HomeController@jdata");
-Route::get('/food', "FrontendController@food");
+/* -start- 舊的 -start- */
+Route::get('/old', "FrontendController@index");
+//Route::get('/good', "FrontendController@good_good_to_eat");
+//Route::get('/good2', "FrontendController@good2");
+//Route::get('/index', "FrontendController@index");
+//Route::get('/news', "FrontendController@news");
+//Route::get('/news2/{id}', "FrontendController@news2");
+//Route::get('/case', "FrontendController@case1");
+//Route::get('/case2/{id}', "FrontendController@case2");
+//Route::get('/deco', "FrontendController@deco");
+//Route::get('/deco2/{id}', "FrontendController@deco2");
+//Route::get('/people', "FrontendController@people");
+//Route::get('/people2/{id}', "FrontendController@people2");
+//Route::get('/about', "FrontendController@about");
+//Route::get('/jdata', "HomeController@jdata");
+//Route::get('/food', "FrontendController@food");
 Route::post('/report', "HomeController@report");
+//Route::get('/indextest', "FrontendController@indextest");
+//Route::get('/demo1', "FrontendController@demo1");
+//Route::post('/demo1', "FrontendController@demo1");
+//Route::get('/search', "FrontendController@search");
+//Route::post('/search', "FrontendController@search");
+//Route::get('/explode', "UserController@explode");
+/* -end- 舊的 -end- */
 
-Route::get('/indextest', "FrontendController@indextest");
-Route::get('/demo1', "FrontendController@demo1");
-Route::post('/demo1', "FrontendController@demo1");
-// Route::get('/showCase/{id}', "FrontendController@showCase");
 
-
-Route::get('/search', "FrontendController@search");
-Route::post('/search', "FrontendController@search");
-
-Route::get('/explode', "UserController@explode");
 
 Route::post('/delRateVideo', function () {
 

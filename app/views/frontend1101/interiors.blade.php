@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
-    
+
     <link rel="stylesheet" href="/html1101/css/common.css">
     <link rel="shortcut icon" href="/html1101/img/logo.ico">
     @include("ba")
@@ -25,7 +25,7 @@
     @include("ga_code")
     <!-- header start -->
     @include("frontend1101.comm.header")
-    <!-- header end -->    
+    <!-- header end -->
      <!-- 輪播 -->
     @include("frontend1101.comm.top_ad")
     <!-- 內容 -->
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <?php $i=1;?>
@@ -51,7 +51,7 @@
                             <div class="people_picBox">
                                 @if( !empty($interior->image) AND File::exists(public_path().$interior->image) )
                                     <img src="/public{{$interior->image}}"  alt="{{$interior->title}}">
-                                @endif                                                                      
+                                @endif
                             </div>
                         </div>
                         <div class="col-12 col-md-6 people_textBox">
@@ -61,7 +61,7 @@
                             <div class="people_item align-self-end">
                                 <div class="type_title_e"><span>{{$interior->name}}</span></div>
                                 <p>{{ms_str($interior->content,200) }}</p>
-                                <a href="/f1101/interior2/{{$interior->id}}" alt="more">
+                                <a href="/interior2/{{$interior->id}}" alt="more">
                                     <div class="button_more">MORE</div>
                                 </a>
                             </div>
@@ -76,7 +76,7 @@
                                 <div class="people_item align-self-end">
                                     <div class="type_title_e"><span>{{$interior->name}}</span></div>
                                     <p>{{ms_str($interior->content,200) }}</p>
-                                    <a href="/f1101/interior2/{{$interior->id}}" alt="more">
+                                    <a href="/interior2/{{$interior->id}}" alt="more">
                                         <div class="button_more">MORE</div>
                                     </a>
                                 </div>
@@ -85,7 +85,7 @@
                                 <div class="people_picBox">
                                     @if( !empty($interior->image) AND File::exists(public_path().$interior->image) )
                                         <img src="/public{{$interior->image}}"  alt="{{$interior->title}}">
-                                    @endif                                      
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -93,33 +93,13 @@
                 <?php $i=$i+1; ?>
                 @endforeach
 
-                 
-                
+
+
 
             </div>
         </div>
-        <div class="container">
-            <div class="row pageNumber">
-                <a href="javascript:;">
-                    <div class="pageNumber_box">&lt;</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box pageSelect">1</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">2</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">3</div>
-                </a>
-                <div class="pageNumber_box">...</div>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">10</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">&gt;</div>
-                </a>
-            </div>
+        <div class="row pageNumber">
+            <?php echo with(new CustomPresenter($interiors))->render(); ?>
         </div>
     </section>
     <!-- footer end & To Top-->
@@ -128,8 +108,8 @@
             <i class="fas fa-arrow-up"></i>
         </div>
     </a>
-    <!-- footer start -->    
-    @include("frontend1101.comm.footer")     
+    <!-- footer start -->
+    @include("frontend1101.comm.footer")
     <!-- footer end & To Top-->
 
     <!--javascript-->

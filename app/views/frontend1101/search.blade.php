@@ -20,19 +20,19 @@
 @include("ba")
 <body>
 	@include("ga_code")
-    
+
     <!-- header start -->
-    @include("frontend1101.comm.header") 
+    @include("frontend1101.comm.header")
     <!-- header end -->
 
-     
+
 
     <div id="main">
 		<div class="sub_main">
 			@if($result_post)
 					@foreach($result_post as $post)
 		        <div class="result">
-								<a href="/f1101/news2/{{$post->id}}?color=brown">
+								<a href="/news2/{{$post->id}}?color=brown">
 				            <span class="tit">地產動態-{{$post->name}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($post->content,500)}}(繼續閱讀)</p>
@@ -45,7 +45,7 @@
 			@if($result_people)
 					@foreach($result_people as $people)
 		        <div class="result">
-								<a href="/f1101/people2/{{$people->id}}">
+								<a href="/people2/{{$people->id}}">
 				            <span class="tit">人物觀點-{{$people->name}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($people->content,500)}}(繼續閱讀)</p>
@@ -59,7 +59,7 @@
 			@if($result_rate)
 					@foreach($result_rate as $rate)
 		        <div class="result">
-								<a href="/f1101/case2/{{$rate->id}}">
+								<a href="/case2/{{$rate->id}}">
 				            <span class="tit">新案訊息-{{$rate->title}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($rate->content,500)}}(繼續閱讀)</p>
@@ -72,7 +72,7 @@
 			@if($result_deco)
 					@foreach($result_deco as $deco)
 		        <div class="result">
-								<a href="/f1101/deco2/{{$deco->id}}">
+								<a href="/deco2/{{$deco->id}}">
 								<span class="tit">生活美學-{{$deco->name}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($deco->content,500)}}(繼續閱讀)</p>
@@ -82,8 +82,8 @@
 					@endforeach
 			@endif
 
-			</div>	
-			 
+			</div>
+
     </div>
 	<!-- footer end & To Top-->
     <a href="javascript:;">
@@ -92,7 +92,7 @@
         </div>
     </a>
     <!-- footer start -->
-    @include("frontend1101.comm.footer") 
+    @include("frontend1101.comm.footer")
     <!-- footer end & To Top-->
 	<style>
 		.tit{
@@ -122,7 +122,7 @@
 		}
 	</style>
     <!--javascript-->
- 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

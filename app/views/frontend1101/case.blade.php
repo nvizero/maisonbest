@@ -54,14 +54,14 @@
 
 <div class="container">
     <div class="row tax_type">
-        <a href="/f1101/case" alt="全部">
+        <a href="/case" alt="全部">
             <div class="button_more">全部</div>
         </a>
         <?php
         $areas = DB::table('rate_areas')->where('flag', 1)->orderBy('prime','asc')->get();
         foreach ($areas as $area) {
 
-            echo '<a href="/f1101/case?taiwanArea=' . $area->id . '" alt="">';
+            echo '<a href="/case?taiwanArea=' . $area->id . '" alt="">';
             echo '<div class="button_more">' . $area->name . '</div>';
             echo '</a>';
         }
@@ -76,7 +76,7 @@
         <div class="row ">
             @foreach($ccases as $case)
                 <div class="col-12 col-md-3 case_Page_item">
-                    <a href="/f1101/case2/{{$case->id}}">
+                    <a href="/case2/{{$case->id}}">
                         @if(!empty($case->use_pic))
                             <div class="case_picBox"><img src="/new_rate/{{$case->use_pic}}.jpg" alt="{{$case->title}}"></div>
                         @else
@@ -109,12 +109,12 @@
     </div>
 </section>
 
- 
+
 
 <div style="overflow-x: hidden;margin: 0 auto;max-width: 1000px;">
-    <div style="width: 100%;">        
+    <div style="width: 100%;">
         <div >
-            <div class="row-marquee" >    
+            <div class="row-marquee" >
                 <div class="marquee" id="m">
                     @foreach($ad_8 as $ad8)
                         @if(  !empty($ad8->image) AND File::exists( public_path().$ad8->image)  )
@@ -123,10 +123,10 @@
                             </a>
                         @endif
                     @endforeach
-                </div>        
-            </div>   
+                </div>
+            </div>
         </div>
-    </div>    
+    </div>
 </div>
 
 <!-- footer end & To Top-->

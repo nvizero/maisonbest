@@ -34,18 +34,18 @@
     </div>
     <div class="container">
         <div class="row tax_type">
-            <a href="/f1101/news" alt="全部">
+            <a href="/news" alt="全部">
                 <div class="button_more">全部</div>
             </a>
             <?php
             $type_decos=['地產新聞' ,'今日讀報','房市觀點' ];
 
             foreach($type_decos as $type_name){
-                
-                    echo '<a href=/f1101/news?cate='.$type_name.' alt="">';
+
+                    echo '<a href=/news?cate='.$type_name.' alt="">';
                         echo '<div class="button_more">'.$type_name.'</div>';
                     echo '</a>';
-                
+
             }
             ?>
         </div>
@@ -72,7 +72,7 @@
                         <div class="news_itemCon">
                             <p>{{ms_str_news($post->content,200) }}</p>
                         </div>
-                        <a href="/f1101/news2/{{$post->id}}" alt="more">
+                        <a href="/news2/{{$post->id}}" alt="more">
                             <div class="button_more">MORE</div>
                         </a>
                     </div>
@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         @foreach($rando1_posts as $post )
-                        <a href="/f1101/news2/{{$post->id}}">
+                        <a href="/news2/{{$post->id}}">
                             <div class="news_moreitem">
                                 <img src="/html1101/img/search.png" alt="">
                                 <div>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         @foreach($rando2_posts as $post )
-                            <a href="/f1101/news2/{{$post->id}}">
+                            <a href="/news2/{{$post->id}}">
                                 <div class="news_moreitem">
                                     <img src="/html1101/img/search.png" alt="">
                                     <div>
@@ -124,29 +124,11 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+
             <div class="row pageNumber">
-                <a href="javascript:;">
-                    <div class="pageNumber_box">&lt;</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box pageSelect">1</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">2</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">3</div>
-                </a>
-                <div class="pageNumber_box">...</div>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">10</div>
-                </a>
-                <a href="javascript:;">
-                    <div class="pageNumber_box">&gt;</div>
-                </a>
+                <?php echo with(new CustomPresenter($posts))->render(); ?>
             </div>
-        </div>
+
     </section>
     <!-- footer end & To Top-->
     <a href="javascript:;">
@@ -167,7 +149,7 @@
 
     <script src="/js/Crawler.js"></script>
     <script>
-     
+
 
     $("document").ready(function(){
         marqueeInit({
