@@ -53,9 +53,9 @@
             <?php
             foreach ($peoples as $type_row) {
                 if ($type_row->title != '') {
-
+                    echo '<a href="#">';
                     echo '<div class="button_more" id="pointer_to">' . $type_row->title . '</div>';
-
+                    echo '</a>';
                 }
             }
             ?>
@@ -125,7 +125,7 @@
         .tax_type .button_more {
             cursor: pointer;
             width: auto;
-            padding: 0 15px;
+            padding: 0 15px !important;
             margin: 10px;
         }
     </style>

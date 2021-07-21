@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" integrity="sha512-c7jR/kCnu09ZrAKsWXsI/x9HCO9kkpHw4Ftqhofqs+I2hNxalK5RGwo/IAhW3iqCHIw55wBSSCFlm8JP0sw2Zw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+
     <link rel="stylesheet" href="/html1101/css/page.css">
     <link rel="shortcut icon" href="/html1101/img/logo.ico">
 
     <title>{{$case->title}} | 新案訊息 | 米築</title>
 	@include("fb_code")
-	
+
 	<meta property="og:title"  content="{{$case->fb_title}} | 新案訊息 | 米築"></meta>
 	<meta property="og:type"   content="房屋"></meta>
 	<meta property="fb:app_id" content="1325670327461704" /></meta>
@@ -58,7 +58,7 @@
                 <section class="slider">
                     <div class="flexslider fs1">
                         <ul class="slides">
-                            
+
 
                             @foreach($rate_pics as $pic)
                                 @if( !empty($pic->image) AND File::exists(public_path().$pic->image) )
@@ -68,7 +68,8 @@
                                 @endif
                             @endforeach
 
-                            <li style="overflow:visible;">                                
+{{--                            <li style="overflow:visible;">                                --}}
+                            <li style="display: none;">
                                 <iframe id="player_1" src="https://player.vimeo.com/video/576367717?api=1&amp;player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                             </li>
                             <!--
@@ -89,20 +90,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="title_img">        
+                    <div class="title_img">
                         <?php
-                        $img1=DB::table('rate_pics')->where(['rate_id'=>$case->id , 'name'=>""])->orderBy(DB::raw('RAND()'))->first();                        
-                        ?>            
+                        $img1=DB::table('rate_pics')->where(['rate_id'=>$case->id , 'name'=>""])->orderBy(DB::raw('RAND()'))->first();
+                        ?>
                         <img src="/public{{$img1->image}}" alt="{{$case->title}}" >
                     </div>
                 </div>
                 <div class="col-12 ">
                     <div class="title ">
                         <h2 class="col-12 col-md-9 title_text ">
-                        {{$case->title}} 
+                        {{$case->title}}
                         </h2>
                         <div class="col-12 col-md-3 title_link ">
-                            <div class="icon ">       
+                            <div class="icon ">
                                 @if($case->videoLink)
                                     <a href="{{$case->videoLink}}" target="_new" >
                                             <img src="/images/case/icon4.png">
@@ -113,14 +114,14 @@
                                     <a href="http://maisonbest.com.tw/360/{{$case->vr360Link}}"  target="_new" >
                                         <img src="/images/case/icon3.png">
                                     </a>
-                                @endif                         
+                                @endif
                                 <a href="javascript: void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) ));"  target="_new" >
                                     <i class="fab fa-facebook-square "></i>
                                 </a>
                                 <a href="http://line.naver.jp/R/msg/text/?{{$case->title}}%0D%0A{{Request::url()}}" rel="nofollow" >
                                     <i class="fab fa-line "></i>
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -198,23 +199,23 @@
 
                         @if($case->url && strlen($case->url)>6 )
                             <span>建案網址：
-                                <a href="{{$case->url}}" target="_blank">{{$case->url}}</a>                                
+                                <a href="{{$case->url}}" target="_blank">{{$case->url}}</a>
                             </span>
                         @endif
 
                         @if($case->lineLinkOrg)
                             <span>Line官方建案帳號：
-                                <a href="{{$case->lineLinkOrg}}" target="_blank" style="color:blue;">{{$case->lineLinkOrg}}</a>                                
+                                <a href="{{$case->lineLinkOrg}}" target="_blank" style="color:blue;">{{$case->lineLinkOrg}}</a>
                             </span>
                         @endif
 
                         @if($case->data_from)
                             <span>資料來源：
-                                {{$case->data_from}}						
+                                {{$case->data_from}}
                             </span>
                         @endif
                     </div>
-                    
+
                     <div class="col-12 col-md-5 company_connect ">
                         <h3>預約賞屋</h3>
                         {{Form::open(array('action' => 'HomeController@report' ,"id"=>"report","enctype"=>"multipart/form-data", 'files' => true  ))}}
@@ -275,7 +276,7 @@
             <div class="modal-body">
                 <h4 class="modal-title">隱私聲明</h4>
                 <hr>
-                {{$case->statement_content}} 
+                {{$case->statement_content}}
                 <a class="modal-close">已閱讀</a>
             </div>
         </div>
@@ -286,8 +287,8 @@
         height: auto !important;
     }
     </style>
-    
-    
+
+
 
     <!--隱私聲明END-->
     <!--javascript-->
@@ -295,7 +296,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
+
     <script src="/joke/js/common.js"></script>
     <!-- Syntax Highlighter -->
     <script type="text/javascript" src="/joke/js/shCore.js"></script>
@@ -308,7 +309,7 @@
     <script src="/joke/js/modernizr.js"></script>
     <script src="/joke/js/demo.js"></script>
     <!-- jQuery -->
-   
+
 
     <!-- jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
