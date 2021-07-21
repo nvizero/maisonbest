@@ -1,0 +1,1 @@
+docker run -d -p 8887:80   --name maisonbest_dev  -v /Users/tsengyenchi/victor/php/maisonbest_dev:/var/www/html my_apache

@@ -1,0 +1,287 @@
+/*deco------------------------------------------------------------------*/
+
+.deco_title {
+    margin: 25px;
+}
+
+.deco_grid {
+    height: 500px;
+    width: 100%;
+    box-sizing: content-box;
+    margin: 0;
+}
+
+.deco_grid .deco_3rows {
+    height: 100%;
+    width: 17%;
+    padding: 0;
+}
+
+.deco_grid .deco_2rows {
+    height: 100%;
+    width: 33%;
+    padding: 0;
+    margin: 0;
+}
+
+.deco_grid .deco_3rows .deco_item {
+    height: 33.333%;
+}
+
+.deco_grid .deco_2rows .deco_item {
+    height: 50%;
+}
+
+.deco_item {
+    border: 7px solid #fff;
+    background-color: #333;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/*圖片------*/
+
+.deco_picBox {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.deco_picBox img,
+.deco_3rows .deco_picBox img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.deco_2rows .deco_picBox img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.deco_picBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.deco_picBox .picBox_text {
+    position: absolute;
+    display: block;
+    line-height: 20px;
+    color: #ffffff;
+    bottom: 0;
+    padding: 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.deco_picBox .picBox_text h4 {
+    padding: 0;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.deco_picBox .title_time,
+.deco_picBox .picBox_text h4 {
+    text-shadow: 0 0 3px black
+}
+
+.deco_picBox::before {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+
+.deco_picBox:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.deco_picBox .picBox_text {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.deco_picBox:hover .picBox_text {
+    opacity: 1;
+}
+
+
+/*下方報導-------------------------------------------------------------*/
+
+.deco_content {
+    margin: 70px auto;
+}
+
+.deco_content .container {
+    max-width: 1200px;
+}
+
+.deco_content .col-md-9 {
+    padding-right: 30px;
+    border-right: 1px solid #cccccc;
+}
+
+.deco_content .deco_conItem {
+    display: flex;
+    height: 180px;
+    overflow: hidden;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.deco_content a:last-child .deco_conItem {
+    margin-bottom: 0px;
+}
+
+.deco_conItem .deco_picBox {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.deco_conItem .deco_picBox::before {
+    content: '';
+    width: 0;
+}
+
+a:hover .deco_conItem .textBox h3 {
+    color: #C19949;
+}
+
+.deco_conItem .textBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.deco_conItem .textBox h3 {
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 1.4rem;
+    overflow: hidden;
+    text-align: justify;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.deco_conItem .textBox p {
+    overflow: hidden;
+    margin: 0;
+    color: #333333;
+    font-weight: 300;
+    line-height: 1.4rem;
+    align-items: flex-end;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.deco_conItem .textBox .title_time {
+    color: #666666;
+    font-size: 16px;
+    margin: 10px auto;
+    margin-left: 0;
+    font-weight: 500;
+}
+
+.deco_bar {
+    height: 100%;
+    color: #000000;
+}
+
+.deco_bar .deco_barTitle {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.deco_bar .deco_barCon .icon {
+    margin: 0 auto 30px 0;
+}
+
+.deco_bar .deco_barCon .icon a {
+    color: rgba( 86, 72, 51, 0.8);
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.deco_bar .deco_barCon .icon a:hover {
+    color: rgba( 86, 72, 51, 1);
+}
+
+.deco_tag {
+    float: left;
+    color: white;
+    background-color: rgba( 86, 72, 51, 0.8);
+    padding: 1px 7px;
+    margin: 2px 5px 2px 0;
+    line-height: 30px;
+    border-radius: 3px;
+}
+
+.deco_tag:hover {
+    background-color: rgba( 86, 72, 51, 1);
+}
+
+@media screen and (max-width:780px) {
+    .deco_bar,
+    .deco_page {
+        display: none;
+    }
+
+    .deco_content {
+        padding: 0;
+        height: auto;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .deco_content .col-md-9 {
+        border-right: 0 solid #fff;
+        padding: 0;
+    }
+    .container {
+        width: 90%;
+    }
+    .deco_content h3 {
+        overflow: hidden;
+        height: 20px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+    .deco_content .deco_conItem {
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+    .deco_conItem .deco_picBox {
+        margin-bottom: 10px;
+        margin-right: 0;
+        max-width: 120%;
+        height: 300px;
+        margin: 15px auto;
+        width: inherit;
+    }
+    .deco_conItem .textBox {
+        width: inherit;
+    }
+}

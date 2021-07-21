@@ -1,0 +1,147 @@
+@charset "utf-8";
+/*
+.flex-direction-nav{
+	display: none;
+}
+*/
+.flex-control-nav{
+	bottom: 2%;
+}
+.flexslider{
+	margin: 0;
+	border: 1px solid #c9bc9c;
+}
+
+.flex-control-paging li a{
+	background-color: rgba(0,0,0,0.5);
+}
+.flex-control-paging li a.flex-active{
+	background-color: #700 !important;
+}
+
+.mainPic{
+	font-size: 0;
+}
+.mainPic img{
+	width: 100%;
+}
+#main{
+	background-color: #fefcfa;
+	padding: 5%;
+	padding-bottom: 0;
+}
+#Name{
+	background-color: #a6937c;
+	padding: 5px 20px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 28px;
+}
+#subTitle{
+	margin: 20px 0 10px;
+	color: #690;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 50px;
+}
+#subTitle img{
+	float: right;
+	margin: 0 5px;
+	width: 50px;
+	cursor: pointer;
+}
+#main > #intro p{
+	margin: 10px 0;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+#main > #intro p img{
+	max-width: 100%;
+	height: auto !important; 
+}
+#intro{
+	border-top: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+}
+#intro span{
+	display: inline-block;
+	margin: 10px 0;
+	letter-spacing: 1px;
+	line-height: 28px;
+	text-align: justify;
+	text-justify: distribute;
+}
+#info p{
+	background-color: #f39800;
+	margin-top: 20px;
+	width: 75px;
+	padding: 5px 15px;
+	color: #FFF;
+	font-size: 18px;
+}
+#info ul:nth-child(2){
+	float: left;
+	list-style-type: none;
+	margin: 30px 0;
+	width: 23%;	
+	padding-right: 2%;
+}
+#info ul:nth-child(3){
+	float: left;
+	list-style-type: none;
+	margin: 30px 0;
+	width: 40%;
+	border-left: 1px solid #777;
+	padding: 0 2%;
+}
+#info ul li{
+	margin: 5px 0;
+}
+#info > div{
+	font-size: 0;
+	text-align: center;
+}
+#info img{
+	float: left;
+	width: 30%;
+	border-radius: 10px;
+}
+
+aside{
+	padding: 0 3%;
+}
+
+
+@media (max-width: 980px){
+
+#info ul:nth-child(2) , #info ul:nth-child(3){
+	width: 46%;
+}
+#info img{
+	float: none;
+	width: 60%;
+}
+
+}
+
+@media (max-width: 480px){
+
+#subTitle span:last-child{
+	display: block;
+}
+#info ul:nth-child(2) , #info ul:nth-child(3){
+	margin: 0;
+	width: 96%;
+	border: none;
+	padding: 0;
+}
+#info ul li{
+	margin: 0;
+	padding: 5px 0;
+}
+#info img{
+	float: none;
+	width: 90%;
+}
+
+}

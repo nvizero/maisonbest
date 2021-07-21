@@ -1,0 +1,263 @@
+#container {
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+/* case case case case case case case  */
+
+#case {
+    overflow-x: hidden;
+    position: relative;
+    background: url(/images/index/case_bg1.jpg) bottom no-repeat;
+}
+
+#case .select {
+    margin: 8% 3%;
+}
+
+#case .select .left {
+    float: left;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+#case .select .right {
+    float: right;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+#case .select>div {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slick4 .area {
+    background: url(/images/index/case_bg2.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin: 5px;
+    width: 178px;
+    height: 55px;
+    padding: 10px 0;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slick4 .area a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.slick4 .area a p {
+    color: #FFF;
+    padding: 0;
+    margin: -2px 0 0 0;
+    text-align: center;
+}
+
+#case .slick2 {
+    position: relative;
+    margin: 0 1%;
+}
+
+#case .slick2>img {
+    width: 100%;
+}
+
+#case .slick2 .detail {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 0 10%;
+    padding-bottom: 35px;
+    color: #FFF;
+}
+
+#case .slick2 .detail img {
+    display: block;
+    margin: 0 auto 20px;
+    margin-top: -35px;
+    cursor: pointer;
+}
+
+#case .slick2 .detail span {
+    background-color: #b28850;
+    padding: 5px 20px;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* close */
+
+#case button.close {
+    top: 40%;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+}
+
+#case .slick2 .detail.close {
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 1s;
+    -webkit-transition: 1s;
+}
+
+#case .slick2 .detail.close img {
+    margin-top: 0;
+}
+
+#case .slick2 .detail.close p {
+    visibility: hidden;
+}
+
+#case .slick2 .detail ul {
+    float: left;
+    margin: 10px 0;
+    width: 50%;
+    list-style-type: none;
+}
+
+#case .slick2 .detail ul li {
+    margin: 8px 0;
+    letter-spacing: 1px;
+}
+
+#case .slick-list {
+    overflow: visible;
+}
+
+.slick-slider {
+    margin-bottom: 0;
+}
+
+#case button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background: none;
+    width: 26px;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+}
+
+#case button:focus {
+    outline: none;
+}
+
+#prev {
+    left: 0%;
+    background-size: 100% 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+#prev.move {
+    left: 10%;
+}
+
+#prev:before {
+    content: '\f001';
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "flexslider-icon";
+    font-size: 40px;
+}
+
+#next {
+    right: 0%;
+    background: url(../images/index/next.png);
+    background-size: 100% 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+#next.move {
+    right: 10%;
+}
+
+#next:before {
+    content: '\f002';
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "flexslider-icon";
+    font-size: 40px;
+}
+
+#case>p {
+    text-align: center;
+    padding: 30px 0;
+}
+
+#case>p .link {
+    float: none;
+    display: block;
+    margin: 10px auto;
+    width: 56px;
+}
+
+@media (max-width: 768px) {
+    #case button {
+        top: 30%;
+        transform: translateY(-30%);
+        -webkit-transform: translateY(-30%);
+    }
+    #case .slick2 .detail {
+        overflow: auto;
+        position: relative;
+    }
+    #case .slick2 .detail img {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #case button {
+        top: 20%;
+        transform: translateY(-20%);
+        -webkit-transform: translateY(-20%);
+    }
+    #case .slick2 {
+        padding-top: 40px;
+    }
+    #case .slick2 .detail {
+       height: 100%;
+    }
+    #case .slick2 .detail ul {
+        margin: 0;
+        width: 100%;
+    }
+    #case .slick2 .detail ul li {
+        margin: 15px 0 0;
+    }
+}
+
+.flexslider .youtube {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.flexslider .youtube iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    float: right;
+    background-color: #700;
+    margin: 10px 20px 0 0;
+    padding: 5px 20px;
+    color: #FFF;
+}

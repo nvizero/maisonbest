@@ -1,0 +1,907 @@
+/*輪播----------------------------------------------------------------------------------*/
+
+ol.carousel-indicators {
+    align-items: flex-end;
+    margin: 10px;
+}
+
+
+/* DECO生活美學-------------------------------------------------------------------------*/
+
+.index_decoPage {
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.index_decoPage_right,
+.index_decoPage_left {
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 0;
+    height: 650px;
+}
+.index_img8090{
+    width: 100%;
+    overflow: hidden;
+}
+.index_img8090 img{
+    height: 650px;
+    width: 1000px;
+}
+.index_deco_textBox {
+    position: relative;
+    height: auto;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 1.8px;
+    padding: 10px 0;
+    margin: 15px;
+}
+
+.index_deco_textBox p {
+    padding-top: 10px;
+}
+
+
+/*--------------圖片比例跟動態------------*/
+
+.index_picBox {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 15px;
+}
+
+.index_picBox img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.index_img3425 {
+    width: auto;
+}
+
+.index_picBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.index_picBox .picBox_text {
+    position: absolute;
+    display: block;
+    line-height: 20px;
+    color: #ffffff;
+    bottom: 0;
+    padding: 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.index_picBox .picBox_text p {
+    color: #fff;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.index_picBox .title_time,
+.index_picBox .picBox_text p {
+    font-weight: 300;
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+.computer, .phone{
+    display: none;
+}
+@media screen and (min-width:780px) {
+    .computer{
+        display: unset;
+        z-index: 2;
+    }
+    .phone{
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        z-index: 0;
+    }
+    .index_decoPage {
+        height: auto;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .index_decoPage_right,
+    .index_decoPage_left {
+        margin-top: 50px;
+        position: relative;
+    }
+    .index_deco_textBox {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        z-index: 5;
+        width: 120%;
+        height: 90px;
+        text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+    }
+    .index_deco_textBox p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+    .index_img3425 {
+        width: 60%;
+        height: 30%;
+        overflow: hidden;
+        margin: 30px auto 30px 12px;
+    }
+    .index_img6043 {
+        max-width: 100%;
+        height: 33%;
+        overflow: hidden;
+    }
+    .index_img6043 img,
+    .index_img3425 img,
+    .index_img8090 img  {
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    .index_decoPage_right .index_picBox .picBox_text {
+        right: 0;
+    }
+    /*hover-----------------*/
+    .index_picBox::before {
+        background: rgba(0, 0, 0, 0);
+        transition: 0.3s;
+    }
+    .index_picBox:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .index_picBox .picBox_text {
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .index_picBox:hover .picBox_text {
+        opacity: 1;
+    }
+}
+@media screen and (max-width:767px){
+    /* 小裝置 */
+    .phone{
+        display: unset;
+    }
+    .phone a{
+        top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 1px solid #fff;
+    }
+    .index_decoPage{
+        margin-bottom: 0;
+    }
+    .index_decoPage_right{
+     display: none;
+    }
+    .index_decoPage_right,
+    .index_decoPage_left {
+        height: auto;
+    }
+    .index_decoPage_left{
+        height: auto;
+        padding-bottom: 0;
+    }
+    .phone{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .owl-carousel .index_picBox{
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: -15px;
+    }
+    .index_picBox::before {
+        background: rgba(0, 0, 0, 0);
+    }
+    .index_picBox .picBox_text {
+        position: static;
+        display: block;
+        top: 70%;
+        line-height: 20px;
+        color: #000000;
+        z-index: 10;
+    }
+    .index_picBox .picBox_text p,.title_time {
+        color: #555555;
+        text-shadow: none;
+    }
+    .index_picBox .title_time,
+    .index_picBox .picBox_text p {
+        font-weight: 300;
+        text-shadow: none;
+    }
+    .index_picBox .title_left{
+        padding: 10px;
+        padding-bottom: 0;
+    }
+
+    .index_picBox .title_left img {
+        float: left;
+        width: 50px;
+        padding: 0;
+        margin: 0 10px 0 0;
+    }
+}
+
+/* CASE新案訊息-------------------------------------------------------------------------*/
+
+.index_casePage {
+    position: relative;
+    padding: 10px;
+    padding-top: 40px;
+}
+
+.index_casePage .title_row {
+    padding-bottom: 20px;
+}
+
+.index_casePage .container {
+    padding: 0;
+}
+
+.index_casePage .thumbnails {
+    margin: auto 30px;
+    overflow: hidden;
+}
+
+.index_casePage .thumbnails li {
+    margin: 0;
+}
+
+.index_casePage .case-btn {
+    display: block;
+    position: unset;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.index_casePage .carousel-control {
+    display: inline-block;
+    position: static;
+    font-size: 65px;
+    font-weight: 200;
+    line-height: 18px;
+    color: #fff;
+    background-color: rgba(256, 256, 256, 0);
+    border: 0;
+    text-shadow: 0 0 5px #000;
+    opacity: 0.4;
+    width: 40px;
+}
+
+.index_casePage .carousel-control:hover {
+    opacity: 0.7;
+    text-shadow: 0 0 5px #000;
+}
+
+.index_casePage_item {
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.index_casePage_item .index_picBox {
+    width: 100%;
+    margin: 0;
+}
+
+.index_casePage_item .index_picBox:before {
+    content: '';
+    width: 0;
+}
+
+@media screen and (max-width:767px){
+    .index_decoPage{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .index_casePage{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .index_casePage .title_row{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .index_casePage .tax_type{
+        margin: 0 10px;
+    }
+    .b_more{
+        margin: 0;
+    }
+    .index_casePage .row{
+        margin: 0 auto;
+    }
+    .index_casePage .button_more{
+        width: 90%;
+        margin-left:auto;
+        margin-right:auto;
+        letter-spacing: 0;
+    }
+    .carousel-wrap .owl-carousel{
+        margin: 0 auto;
+        padding-bottom: 0;
+        margin-bottom: -10px;
+    }
+}
+
+/**************************************/
+
+.carousel-wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  .owl-carousel .item {
+    position: relative;
+    padding: 15px;
+    /* TEST */
+    height: 360px;
+  }
+  .owl-nav > div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
+  }
+
+  .owl-nav i {
+    font-size: 30px;
+    color: #fff;
+    text-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .owl-nav .owl-prev {
+    left: -10px;
+  }
+  .owl-nav .owl-prev i:before{
+      content: '\f053';
+  }
+  .owl-nav .owl-next {
+    right: -10px;
+  }
+  .owl-nav .owl-next i:before{
+      content: '\f054';
+  }
+.index_casePage_item .index_cardBox {
+    padding: 10px;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 30px;
+    background-color: #505050;
+}
+
+.index_casePage_item:hover .index_cardBox {
+    text-shadow: none;
+}
+
+.index_casePage_item .index_cardBox h4,
+.index_casePage_item .index_cardBox span {
+    display: block;
+    color: #fff;
+    line-height: 2em;
+}
+
+.index_casePage_item .index_cardBox h4 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.index_casePage_item .index_cardBox span {
+    font-size: 20px;
+    line-height: 1.5rem;
+}
+
+.button_more {
+    width: 160px;
+    height: 30px;
+    letter-spacing: 1.5px;
+    color: #564833;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #564833;
+}
+
+.button_more:hover {
+    background-color: #564833;
+    color: #ffffff;
+}
+
+.button_more_w {
+    width: 160px;
+    height: 30px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #564833;
+}
+
+.button_more_w:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+}
+
+@media screen and (min-width:768px) {
+
+
+  .owl-nav .owl-prev {
+    left: -20px;
+  }
+
+  .owl-nav .owl-next {
+    right: -20px;
+  }
+  .owl-carousel .item {
+    position: relative;
+    padding: 15px;
+    height: 230px;
+  }
+    .index_casePage_item .index_cardBox {
+        background-color: rgba(0, 0, 0, 0.32);
+        transform: translateY(-50px);
+        border-radius: 2px;
+        padding: 10px 2px;
+        width: 85%;
+        min-height: 80px;
+        margin: auto;
+        color: #000000;
+        text-shadow: 0 0 1px #555555;
+        box-shadow: inset 0 0 10px -3px rgba(0, 0, 0, 0.5), 0 0 10px -3px rgba(0, 0, 0, 0.7);
+    }
+    .index_casePage_item:hover .index_cardBox {
+        background-color: rgba(0, 0, 0, 0.6);
+        text-shadow: none;
+    }
+    .index_casePage_item .index_cardBox h4,
+    .index_casePage_item .index_cardBox span {
+        text-align: center;
+        display: block;
+        color: #fff;
+    }
+    .index_casePage {
+        transform: translateX(10px);
+    }
+    .index_casePage_item .index_cardBox span {
+        line-height: 1.2rem;
+    }
+    .index_casePage .case-btn {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0;
+        align-items: center;
+        top: 35%;
+        height: auto;
+    }
+    .index_casePage_item .index_cardBox h4 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+
+/* 建案廣告-------------------------------------------------------------------*/
+
+.ad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 115px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.index_adpic {
+    display: inline-block;
+    max-width: 50%;
+    height: inherit;
+    overflow: hidden;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.index_adpic img {
+    width: 100%;
+}
+
+
+/* people人物觀點--------------------------------------------------------------------------- */
+
+.index_peoplePage {
+    padding: 100px 0;
+    background-color: rgba(190, 185, 175, 0.7);
+}
+
+.index_peoplePage .index_picBox {
+    margin: 0;
+}
+
+.index_peoplePage .index_picBox:before {
+    content: '';
+    width: 0;
+}
+
+.index_peopleTextbox {
+    display: flex;
+    align-items: start;
+    margin: 0;
+    letter-spacing: 1.5px;
+}
+
+.index_people_item {
+    padding-left: 20px;
+    align-self: end;
+}
+
+.index_people_item h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.index_people_item p {
+    overflow: hidden;
+    color: #000000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.index_people_item .button_more_w {
+    margin-bottom: 0;
+}
+
+
+/* news地產動態-------------------------------------------------------------------------------*/
+
+.index_newsPage {
+    padding: 100px 0;
+}
+
+.index_newsPic {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.index_newsPage .index_picBox::before {
+    content: '';
+    width: 0;
+}
+
+.index_newsPage .index_picBox {
+    padding: 0;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.index_newsPage>.index_newsPic img {
+    min-height: 100%;
+    width: auto;
+    border: 1px solid blue;
+}
+
+.index_newsTextbox {
+    margin-top: 40px;
+}
+
+.index_newsTextbox .textItem {
+    display: block;
+    line-height: 51px;
+    padding: 4px 15px;
+    color: #444444;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.index_newsTextbox a {
+    color: #000000;
+}
+
+.index_newsTextbox a:nth-child(2n-1) .textItem {
+    background-color: #EFEDEB;
+}
+
+.index_newsTextbox a:hover .textItem {
+    color: #C19949;
+}
+
+.index_newsTextbox .textItem time,
+.index_newsTextbox .textItem .index_newsType,
+.index_newsTextbox .textItem p {
+    display: block;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+}
+
+.index_newsTextbox .textItem .index_newsType {
+    font-weight: 500;
+    padding: 10px auto;
+}
+
+@media screen and (min-width:768px) {
+    .index_newsPage .index_newsPic {
+        padding: 0;
+        height: 450px;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    .index_newsPage .row {
+        max-height: 450px;
+        overflow: hidden;
+    }
+    .index_newsTextbox .textItem time,
+    .index_newsTextbox .textItem .index_newsType,
+    .index_newsTextbox .textItem p {
+        display: inline;
+    }
+    .index_newsTextbox .textItem {
+        padding: 0 12px;
+        line-height: 2.9em;
+    }
+    .index_newsTextbox .textItem .index_newsType {
+        padding: 0 12px;
+    }
+    .index_newsTextbox .textItem {
+        -webkit-line-clamp: 1;
+    }
+}
+@media screen and (max-width:767px){
+    .index_newsTextbox .textItem {
+        height: 80px;
+        overflow: hidden;
+    }
+}
+
+
+/* 關於米築--------------------------------------------------------------------------------------------*/
+
+.index_aboutPage {
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.index_content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.index_content .title_row h2,
+.index_content .title_row span {
+    color: #fefeff;
+}
+
+.index_containerHalf_L {
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+}
+
+.index_containerHalf_R {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.index_containerHalf_R .index_picBox {
+    margin: 0;
+}
+
+.index_aboutText p {
+    margin: 30px auto;
+    color: #ffffff;
+    max-width: 400px;
+    text-align: justify;
+}
+
+.index_content .index_picBox {
+    max-width: 150px;
+    height: 150px;
+}
+
+@media screen and (max-width:780px) {
+    .index_content .index_picBox {
+        width: 20%;
+        height: 100px;
+    }
+}
+
+
+/*-----IG----------------*/
+
+
+/* 嵌入用 https://github.com/letswritetw/letswrite-instagram-embed/blob/master/index.html */
+
+.ig_run {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.ig_run ul {
+    min-width: 100%;
+    height: 120px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000000;
+    margin: 0;
+}
+
+.ig_run li {
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 33.3333%;
+    height: initial;
+    overflow: hidden;
+    background-color: #000000;
+    text-align: center;
+    display: inline-block;
+}
+
+.ig_run li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: .3s ease-in-out;
+}
+
+.ig_run li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 35%;
+    left: 46%;
+    background: url('../img/ig.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    transition: .3s ease-in-out;
+    opacity: 1;
+}
+
+.ig_run li:hover a::before {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.ig_run li:hover a::after {
+    opacity: 1;
+}
+
+.ig_run a {
+    margin: 0;
+    padding: 0;
+}
+
+.ig_run li img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width:468px) and (max-width:768px) {
+    /**********中裝置***********/
+    .ig_run li {
+        width: 20%;
+        height: 120px;
+    }
+    .ig_run {
+        height: 100px;
+        background-color: black;
+    }
+}
+
+@media screen and (min-width:768px) {
+    /***********大螢幕***************/
+    .index_aboutPage {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .index_content {
+        width: 50vw;
+        margin: 0 auto;
+        height: 500px;
+    }
+    .index_containerHalf_L {
+        width: 100%;
+        height: 100%;
+        max-width: 570px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    .index_containerHalf_R {
+        justify-content: flex-end;
+    }
+    .index_casePage_item .index_cardBox span {
+        font-size: 14px;
+        letter-spacing: -0.5px;
+    }
+    .index_adpic {
+        width: calc(100%/5.2);
+        padding: 0;
+    }
+    .ig_section {
+        margin: 0;
+        padding: 0;
+    }
+    .ig_run {
+        height: 140px;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    .ig_run ul {
+        overflow: unset;
+        background-color: #000000;
+    }
+    .ig_run li {
+        width: calc(100% / 8);
+        height: initial;
+        margin: 0;
+        padding: 0;
+    }
+    .ig_run li img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .ig_run li a::before {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .ig_run li a::after {
+        opacity: 0;
+        background-size: 30px 30px;
+        top: 40%;
+        left: 42%;
+    }
+}
