@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="/fake/css/common.css">
+    <link rel="stylesheet" href="/fake/css/index.css">
+    <link rel="shortcut icon" href="/fake/img/logo2.svg">
+    <title>米築</title>
+</head>
+
+<body>
+<!-- header start -->
+<?php echo $__env->make("frontend1101.comm.header", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- header end -->
+<!-- 輪播 -->
+<?php echo $__env->make("frontend1101.comm.top_ad", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- 輪播 -->
+
+<!-- 生活美學 -->
+<?php echo $__env->make("frontend1101.deco_mobile", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- 新案訊息 -->
+<section class="index_casePage container">
+    <div class="row">
+        <div class="title_row">
+            <img src="/fake/img/ case.svg" alt="">
+            <h2>新案訊息</h2>
+            <span>CASE</span>
+        </div>
+    </div>
+    <div class="row phone">
+        <div class="tax_type">
+            <a href="javascript:;" alt="全部">
+                <div class="button_more">全部</div>
+            </a>
+            <a href="javascript:;" alt="">
+                <div class="button_more">雙北地區</div>
+            </a>
+            <a href="javascript:;" alt="桃園市">
+                <div class="button_more">桃園市</div>
+            </a>
+            <a href="javascript:;" alt="新竹縣市">
+                <div class="button_more">新竹縣市</div>
+            </a>
+            <a href="javascript:;" alt="台中市">
+                <div class="button_more">台中市</div>
+            </a>
+            <a href="javascript:;" alt="苗栗">
+                <div class="button_more">苗栗</div>
+            </a>
+        </div>
+    </div>
+    <div class="carousel-wrap">
+        <div class="owl-carousel">
+            <div class="item">
+                <div class="index_casePage_item">
+                    <a href="pages2.html">
+                        <div class="index_picBox"><img src="/fake/case.jpg " alt="建案名稱"></div>
+                        <div class="index_cardBox">
+                            <h4>士林傳家</h4>
+                            <span>竹市 北區 | 6房七衛浴</span>
+                            <span>格柵美學質感墅</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="index_casePage_item">
+                    <a href="pages2.html">
+                        <div class="index_picBox"><img src="/fake/case.jpg " alt="建案名稱"></div>
+                        <div class="index_cardBox">
+                            <h4>士林傳家</h4>
+                            <span>竹市 北區 | 6房七衛浴</span>
+                            <span>格柵美學質感墅</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="index_casePage_item">
+                    <a href="pages2.html">
+                        <div class="index_picBox"><img src="/fake/case.jpg " alt="建案名稱"></div>
+                        <div class="index_cardBox">
+                            <h4>士林傳家</h4>
+                            <span>竹市 北區 | 6房七衛浴</span>
+                            <span>格柵美學質感墅</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="index_casePage_item">
+                    <a href="pages2.html">
+                        <div class="index_picBox"><img src="/fake/case.jpg " alt="建案名稱"></div>
+                        <div class="index_cardBox">
+                            <h4>士林傳家</h4>
+                            <span>竹市 北區 | 6房七衛浴</span>
+                            <span>格柵美學質感墅</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="index_casePage_item">
+                    <a href="pages2.html">
+                        <div class="index_picBox"><img src="/fake/case.jpg " alt="建案名稱"></div>
+                        <div class="index_cardBox">
+                            <h4>士林傳家</h4>
+                            <span>竹市 北區 | 6房七衛浴</span>
+                            <span>格柵美學質感墅</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container b_more phone">
+        <a href="pages.html" alt="more">
+            <div class="button_more">MORE</div>
+        </a>
+    </div>
+</section>
+
+<!-- 建案廣告 -->
+<div class="ad container">
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+    <div class="index_adpic">
+        <a href="pages2.html">
+            <img src="/fake/Marquee01.jpg" alt="">
+        </a>
+    </div>
+</div>
+<!-- 人物觀點 -->
+<section class="index_peoplePage">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="index_picBox">
+                    <a href="/f1101/people2/<?php echo $people->id; ?>">
+                        <?php if(  !empty($people->image) AND File::exists( public_path().$people->image)  ): ?>
+                            <img src="/public<?php echo $people->image; ?>" />
+                        <?php endif; ?>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 index_peopleTextbox">
+                <div class="title_col">
+                    <img src="/fake/img/people.svg" alt="">
+                    <h2>人物觀點</h2>
+                    <span>PEOPLE</span>
+                </div>
+                <div class="index_people_item align-self-end">
+                    <h3><?php echo $people->title; ?></h3>
+                    <p>
+                        <?php
+                        echo ms_str($people->content);
+                        ?>
+                    </p>
+                    <a href="/people2/<?php echo $people->id; ?>" alt="more">
+                        <div class="button_more_w">MORE</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 地產動態 -->
+<section class="index_newsPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="index_newsPic">
+                    <img src="/fake/news02.jpg" alt="新聞">
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="title_left">
+                    <img src="/fake/img/ news.svg" alt="">
+                    <h2>地產動態</h2>
+                    <span>NEWS</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="index_newsTextbox">
+                    <?php foreach($posts as $_new): ?>
+                        <a href="/f1101/news2/<?php echo $_new->id; ?>">
+                            <div class="textItem">
+                                <time datatime="<?php echo $_new->date; ?>"><?php echo $_new->date; ?></time>
+                                <div class="index_newsType">今日讀報</div>
+                                <p><?php  echo ms_str($_new->content);?></p>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 關於米築 -->
+<section class="index_aboutPage">
+    <div class="index_content">
+        <div class="index_containerHalf_L">
+            <div class="title_row">
+                <h2>關於米築</h2>
+                <span>ABOUT</span>
+            </div>
+            <div class="index_aboutText">
+                <p>米築取自於法文的「<b>Maison</b>」，做為名詞為「家」之意，當成形容詞則是「獨門的」，所以我們將兩者合一，並以時尚、質感為主軸，建構全台灣最獨特的房地產網站─米築株式會社。</p>
+
+                <p>一棟建築從無到有，必須「理性」考量動線、尺寸、坪效、機能性；當住進去後，人與空間產生互動情感，反映在內心世界的「感性」軸線上。</p>
+                <p>就像建築一樣，米築兼具理性與感性！</p>
+            </div>
+        </div>
+    </div>
+    <div class="index_content">
+        <div class="index_containerHalf_R ">
+            <div class="index_picBox"><img src="/fake/index01.jpg" alt=""></div>
+            <div class="index_picBox"><img src="/fake/index02.jpg" alt=""></div>
+            <div class="index_picBox"><img src="/fake/index03.jpg" alt=""></div>
+            <div class="index_picBox"><img src="/fake/index04.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+<!-- footer start -->
+
+<?php echo $__env->make("frontend1101.comm.footer", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<!-- footer end & To Top-->
+<a href="javascript:;">
+    <div class="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</a>
+
+
+<section class="ig_section">
+    <div class="row">
+        <div class="ig_run scrollbox">
+            <ul class="justify-content-center">
+                <li>
+                    <a href="https://www.instagram.com/p/B1B5ghlJNGW/" target="_blank">
+                        <img src="/fake/ig01.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/B1B5ghlJNGW/" target="_blank">
+                        <img src="/fake/ig02.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BtbGGKLFA2W/" target="_blank">
+                        <img src="/fake/ig01.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/B1B5ghlJNGW/" target="_blank">
+                        <img src="/fake/ig02.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BtbGGKLFA2W/" target="_blank">
+                        <img src="/fake/ig01.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/B1B5ghlJNGW/" target="_blank">
+                        <img src="/fake/ig02.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BtbGGKLFA2W/" target="_blank">
+                        <img src="/fake/ig01.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BtbGGKLFA2W/" target="_blank">
+                        <img src="/fake/ig02.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--javascript-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
+<script src="https://use.fontawesome.com/826a7e3dce.js"></script>
+<!-- javascript -->
+<script src="/fake/js/common.js"></script>
+<script>
+    if($(window).width() >= '768'){
+        $(".deco-carousel").addClass("owl-carousel");
+    }
+</script>
+</body>
+
+</html>
