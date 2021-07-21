@@ -68,7 +68,7 @@
                                 @endif
                             @endforeach
 
-{{--                            <li style="overflow:visible;">                                --}}
+                            
                             <li style="display: none;">
                                 <iframe id="player_1" src="https://player.vimeo.com/video/576367717?api=1&amp;player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                             </li>
